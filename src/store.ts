@@ -1,16 +1,17 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
+import Vue from "vue";
+import Vuex, { StoreOptions } from "vuex";
+import vuexLocal from "@/plugins/vue-persist";
+import { RootState } from "@/store/types";
 
 Vue.use(Vuex);
 
-export default new Vuex.Store({
+const store: StoreOptions<RootState> = {
   state: {
-
+    appName: "Vuejs 2 + Vuex + Typescript",
+    appVersion: "0.0.1"
   },
-  mutations: {
+  modules: {},
+  plugins: [vuexLocal.plugin]
+};
 
-  },
-  actions: {
-
-  },
-});
+export default new Vuex.Store<RootState>(store);
