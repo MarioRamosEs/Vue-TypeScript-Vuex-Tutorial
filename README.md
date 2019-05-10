@@ -1,5 +1,7 @@
 # vue-vuex-ts-app
 
+https://www.udemy.com/vuejs-2-vuex-typescript-pro
+
 ## Project setup
 ```
 npm install
