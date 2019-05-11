@@ -10,7 +10,14 @@ export default new Router({
     {
       path: "/",
       name: "todos",
-      component: () => import("./views/TodoApp/component")
+      component: () =>
+        import(/* webpackChunkName: "todos" */ "./views/TodoApp/component")
+    },
+    {
+      path: "/login",
+      name: "login",
+      component: () =>
+        import(/* webpackChunkName: "login" */ "./views/Login/component")
     }
   ]
 });
